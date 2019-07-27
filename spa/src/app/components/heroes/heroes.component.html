@@ -1,0 +1,22 @@
+<h1>Heroes</h1>
+<hr>
+
+
+<div class="card-columns">
+
+    <div *ngFor='let hero of heros; let i = index' class="card">
+        <img [src]="hero.img" class="card-img-top img-fluid" [alt]="hero.nombre">
+        <div class="card-block">
+            <h5 class="card-title">{{hero.nombre}}</h5>
+            <p class="card-text">{{hero.bio| slice:0:260}}...</p>
+            <p class="card-text"><small class="text-muted">{{hero.aparicion}}</small></p>
+
+            <!-- <a [routerLink]="['/hero',i]">Ver mas...</a> -->
+
+            <button type="button" (click)="ver(i)" class="btn btn-primary">ver</button>
+        </div>
+
+
+    </div>
+
+</div>

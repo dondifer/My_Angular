@@ -1,0 +1,100 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Variable</th>
+                <th scope="col">Pipe</th>
+                <th scope="col">Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{nombre}}</td>
+                <td>uppercase</td>
+                <td>{{nombre|uppercase}}</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>{{nombre}}</td>
+                <td>lowercase</td>
+                <td>{{nombre|lowercase}}</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>{{nombre}}</td>
+                <td>slice:3</td>
+                <td>{{nombre|slice:3}}</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>{{nombre}}</td>
+                <td>slice:0:3</td>
+                <td>{{nombre|slice:0:3}}</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>{{pi}}</td>
+                <td>number:'3.0-0'</td>
+                <td>{{pi|number:'3.0-0'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>{{pi}}</td>
+                <td>number:'1.0-2'</td>
+                <td>{{pi|number:'1.0-2'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>{{a}}</td>
+                <td>percent</td>
+                <td>{{a|percent}}</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>{{a}}</td>
+                <td>percent:'2.2-2'</td>
+                <td>{{a|percent:'2.2-2'}}</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>{{salario}}</td>
+                <td>currency</td>
+                <td>{{salario|currency}}</td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>{{salario}}</td>
+                <td>currency:'EUR':true</td>
+                <td>{{salario|currency:'EUR':true}}</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>{{salario}}</td>
+                <td>currency:'EUR':false:'4.2-2'</td>
+                <td>{{salario|currency:'EUR':false:'4.2-2'}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">11</th>
+                <td>{{nombre2}}</td>
+                <td>capitalizado</td>
+                <td>{{nombre2|capitalizado}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">12</th>
+                <td>{{nombre2}}</td>
+                <td>password: {{bool}}</td>
+                <td>{{nombre2| password:bool}}</td>
+            </tr>
+            <button class="button-dark" (click)='cambiaBool()'>Cambio</button>
+
+        </tbody>
+    </table>
+    <div>
+        <iframe width="560" height="315" [src]="video | domseguro: 'https://www.youtube.com/embed/'" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br><br><br>
+    </div>
+</div>
